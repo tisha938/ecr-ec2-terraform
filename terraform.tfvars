@@ -1,0 +1,10 @@
+
+aws_region                = "ap-south-1" 
+ami                       = "ami-04a37924ffe27da53" 
+instance_type             = "t3a.medium"  
+vpc_id                    = "vpc-0bec741f8f09ff4fd"  
+subnet_id                 = "subnet-02a7d5b89e62fa594"  
+iam_role_name             = "ecr_access_role1"  
+iam_policy_name           = "ecr_access_policy1" 
+iam_instance_profile_name  = "ecr_instance_profile1"  
+s3_bucket_name            = "terraform-state-s3-testing"  
