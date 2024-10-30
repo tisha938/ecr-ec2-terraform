@@ -7,12 +7,12 @@ terraform {
  }
 }
 provider "aws" {
-  region = "ap-south-1"
+  region = var.aws_region
 }
 resource "aws_instance" "public" {
-  ami                    = "ami-04a37924ffe27da53" 
-  instance_type          = "t3a.medium"
-subnet_id              = "subnet-02a7d5b89e62fa594"
+   ami                          = var.ami
+  instance_type                = var.instance_type
+  subnet_id                    = var.subnet_id
   security_groups        = [aws_security_group.sg.id] 
   key_name               = aws_key_pair.my_key1.key_name 
   
